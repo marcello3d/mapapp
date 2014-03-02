@@ -26,7 +26,7 @@
       <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="21" selection-start="2467" selection-end="2467" vertical-scroll-proportion="0.0" vertical-offset="834" max-vertical-offset="1540">
+            <state line="104" column="46" selection-start="2896" selection-end="2896" vertical-scroll-proportion="0.0" vertical-offset="781" max-vertical-offset="1540">
               <folding />
             </state>
           </provider>
@@ -35,7 +35,7 @@
       <file leaf-file-name="ui.ract" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/js/lib/ui.ract">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="269" column="32" selection-start="11844" selection-end="11844" vertical-scroll-proportion="1.295082" vertical-offset="2090" max-vertical-offset="3542">
+            <state line="15" column="0" selection-start="519" selection-end="519" vertical-scroll-proportion="0.18730651" vertical-offset="44" max-vertical-offset="3421">
               <folding />
             </state>
           </provider>
@@ -44,34 +44,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="230" selection-end="230" vertical-scroll-proportion="-6.0" vertical-offset="0" max-vertical-offset="253">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Ractive.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/ractify/node_modules/ractive/build/Ractive.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8298" column="94" selection-start="245664" selection-end="245664" vertical-scroll-proportion="0.0" vertical-offset="90585" max-vertical-offset="115203">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/js/lib/test.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="476" column="16" selection-start="0" selection-end="113578" vertical-scroll-proportion="-2.7631578" vertical-offset="5026" max-vertical-offset="34210">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test2.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/js/lib/test2.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="145" column="17" selection-start="5446" selection-end="5450" vertical-scroll-proportion="1.1914893" vertical-offset="1651" max-vertical-offset="34232">
+            <state line="21" column="0" selection-start="607" selection-end="607" vertical-scroll-proportion="-10.5" vertical-offset="0" max-vertical-offset="297">
               <folding />
             </state>
           </provider>
@@ -80,7 +53,7 @@
       <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="100" column="20" selection-start="1470" selection-end="1470" vertical-scroll-proportion="0.0" vertical-offset="603" max-vertical-offset="1309">
+            <state line="52" column="23" selection-start="861" selection-end="867" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="1606">
               <folding />
             </state>
           </provider>
@@ -122,18 +95,19 @@
         <option value="$PROJECT_DIR$/gulpfile.js" />
         <option value="$PROJECT_DIR$/node_modules/ractive/build/Ractive.js" />
         <option value="$PROJECT_DIR$/node_modules/ractify/node_modules/ractive/build/Ractive.js" />
-        <option value="$PROJECT_DIR$/client/index.html" />
-        <option value="$PROJECT_DIR$/client/js/lib/test.json" />
         <option value="$PROJECT_DIR$/client/js/lib/test2.json" />
+        <option value="$PROJECT_DIR$/client/js/lib/test.json" />
+        <option value="$PROJECT_DIR$/client/index.html" />
+        <option value="$PROJECT_DIR$/client/css/main.css" />
         <option value="$PROJECT_DIR$/client/js/index.js" />
         <option value="$PROJECT_DIR$/client/js/lib/ui.ract" />
-        <option value="$PROJECT_DIR$/client/css/main.css" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="404" />
     <option name="y" value="22" />
-    <option name="width" value="1280" />
+    <option name="width" value="876" />
     <option name="height" value="774" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -366,14 +340,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1280" height="774" extended-state="6" />
+    <frame x="404" y="22" width="876" height="774" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32831737" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.171875" sideWeight="0.499316" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25114155" sideWeight="0.499316" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3994528" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17227878" sideWeight="0.500684" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
@@ -382,7 +357,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32831737" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -415,16 +389,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node_modules/watchify/node_modules/browserify/node_modules/browser-pack/node_modules/combine-source-map/node_modules/convert-source-map/test/comment-regex.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="22" selection-start="264" selection-end="264" vertical-scroll-proportion="0.24282561" vertical-offset="0" max-vertical-offset="1166" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/watchify/node_modules/browserify/node_modules/browser-pack/node_modules/combine-source-map/node_modules/convert-source-map/example/comment-to-json.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="20" selection-start="84" selection-end="84" vertical-scroll-proportion="0.121412806" vertical-offset="0" max-vertical-offset="453" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/watchify/node_modules/browserify/node_modules/browser-pack/node_modules/combine-source-map/node_modules/convert-source-map/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="60" column="14" selection-start="1774" selection-end="1774" vertical-scroll-proportion="0.33261803" vertical-offset="505" max-vertical-offset="1551" />
@@ -637,51 +601,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/index.html">
+    <entry file="file://$PROJECT_DIR$/client/js/lib/test2.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="230" selection-end="230" vertical-scroll-proportion="-6.0" vertical-offset="0" max-vertical-offset="253">
+        <state line="145" column="17" selection-start="5446" selection-end="5450" vertical-scroll-proportion="-0.086687304" vertical-offset="1651" max-vertical-offset="34232">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8255" column="29" selection-start="259209" selection-end="259209" vertical-scroll-proportion="0.5373832" vertical-offset="90575" max-vertical-offset="100639">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/ractify/node_modules/ractify/node_modules/ractify/node_modules/ractify/node_modules/ractify/node_modules/ractify/node_modules/ractify/node_modules/ractify/node_modules/ractify/node_modules/ractify/node_modules/ractify/node_modules/ractify/node_modules/ractify/node_modules/ractify/node_modules/ractify/node_modules/ractify/node_modules/ractive/src/render/DomFragment/Element/prototype/teardown.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="52" selection-start="340" selection-end="351" vertical-scroll-proportion="0.33333334" vertical-offset="3" max-vertical-offset="902">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/js/lib/test.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="476" column="16" selection-start="0" selection-end="113578" vertical-scroll-proportion="-2.7631578" vertical-offset="5026" max-vertical-offset="34210">
+        <state line="1900" column="30" selection-start="69591" selection-end="69601" vertical-scroll-proportion="-3.6699507" vertical-offset="22390" max-vertical-offset="39457">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/ractify/node_modules/ractive/build/Ractive.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8298" column="94" selection-start="245664" selection-end="245664" vertical-scroll-proportion="0.0" vertical-offset="90585" max-vertical-offset="115203">
+        <state line="8298" column="94" selection-start="245664" selection-end="245664" vertical-scroll-proportion="0.7284768" vertical-offset="90585" max-vertical-offset="115203">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/js/index.js">
+    <entry file="file://$PROJECT_DIR$/client/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="21" selection-start="2467" selection-end="2467" vertical-scroll-proportion="0.0" vertical-offset="834" max-vertical-offset="1540">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/js/lib/test2.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="145" column="17" selection-start="5446" selection-end="5450" vertical-scroll-proportion="1.1914893" vertical-offset="1651" max-vertical-offset="34232">
+        <state line="21" column="0" selection-start="607" selection-end="607" vertical-scroll-proportion="-10.5" vertical-offset="0" max-vertical-offset="297">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="20" selection-start="1470" selection-end="1470" vertical-scroll-proportion="0.0" vertical-offset="603" max-vertical-offset="1309">
+        <state line="52" column="23" selection-start="861" selection-end="867" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="1606">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="104" column="46" selection-start="2896" selection-end="2896" vertical-scroll-proportion="0.0" vertical-offset="781" max-vertical-offset="1540">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/js/lib/ui.ract">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="269" column="32" selection-start="11844" selection-end="11844" vertical-scroll-proportion="1.295082" vertical-offset="2090" max-vertical-offset="3542">
+        <state line="15" column="0" selection-start="519" selection-end="519" vertical-scroll-proportion="0.18730651" vertical-offset="44" max-vertical-offset="3421">
           <folding />
         </state>
       </provider>

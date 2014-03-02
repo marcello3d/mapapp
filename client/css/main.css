@@ -5,18 +5,12 @@ html, body {
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 13px;
 }
-#top {
-    display: table-row;
-    width: 100%;
-}
-#top > * {
-    display: table-cell;
-    width: 50%;
-    vertical-align: top;
+* {
+    box-sizing: border-box;
 }
 #map-canvas {
-    width: 100%;
-    height: 500px;
+    width: 80%;
+    height: 300px;
     background: #888;
 }
 #routes {
@@ -27,7 +21,7 @@ html, body {
     background: #eee;
     box-sizing: border-box;
     left: auto;
-    width: 40em;
+    width: 45em;
     bottom: 50%;
     padding: 10px;
 }
@@ -36,6 +30,27 @@ html, body {
 }
 #input .address input {
     width: 15em;
+}
+#routes .origin .name input {
+    width: 7em;
+}
+#routes .origin .address input {
+
+    width: 100%;
+}
+.id {
+    background: #be80ff;
+    border-radius: 10px;
+    width: 1.5em;
+    height: 1.5em;
+    display: inline-block;
+    border: solid 1px black;
+    padding: 1px;
+    font-weight: bold;
+    text-align: center;
+}
+.origin .id {
+    background: #4bffa9;
 }
 
 #input .details {
@@ -54,12 +69,21 @@ h1 {
     width: 15px;
     height: 15px;
 }
+#routes table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    display: inline-block;
+}
 #routes th, #routes td {
+    border: solid 1px #eee;
+    border-left-color: #888;
+    border-right-color: #888;
     white-space: nowrap;
     vertical-align: top;
 }
 #routes th {
     background: #eee;
+    border: solid 1px #888;
 }
 
 textarea {
@@ -69,6 +93,7 @@ textarea {
 }
 #routes .route {
     text-decoration: none;
+    display: block;
 }
 #routes .route img {
     padding-right: 0.5ch;
@@ -88,17 +113,19 @@ textarea {
 #routes .route .bad {
     color: #f00;
 }
-#routes .route.walk,
-#routes .route.bike,
-#routes .route.transit,
-#routes .route.drive {
+#routes .walk,
+#routes .bike,
+#routes .transit,
+#routes .drive {
     display: none;
 }
 #routes td.driving,
 #routes td.walking,
 #routes td.biking,
 #routes td.transiting {
-    background: #eee;
+    padding: 2px 5px;
+    text-align: right;
+    width: 1em;
 }
 #routes .show-driving .drive {
     display: block;

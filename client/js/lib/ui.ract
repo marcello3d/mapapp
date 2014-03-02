@@ -10,106 +10,96 @@
             <h1>Destinations</h1>
             {{#destinations:d}}
                 <div>
-                    <span class="id">{{id}}. </span>
+                    <span class="id">{{id}}</span>
                     <label class="name"><input placeholder="Name..." value="{{name}}"></label>
-                    <label class="address"><input placeholder="Address..." value="{{address}}"></label>
+                    <label class="address"><input placeholder="Address..." value="{{address}}" on-change="update:{{this}}"></label>
                     <label class="transit"><input type="checkbox" checked="{{.driving}}"><img class="icon" src="/img/car.svg"></label>
                     <label class="transit"><input type="checkbox" checked="{{.walking}}"><img class="icon" src="/img/walk.svg"></label>
                     <label class="transit"><input type="checkbox" checked="{{.biking}}"><img class="icon" src="/img/bike.svg"></label>
                     <label class="transit"><input type="checkbox" checked="{{.transiting}}"><img class="icon" src="/img/transit.svg"></label>
-                    <div class="details">
-                        <button on-click="update:{{this}}">Locate</button>
-                        {{#.formatted_address}}{{formatted_address}}{{/.formatted_address}}
-                    </div>
                 </div>
             {{/destinations}}
             <p><button on-click="add-destination">Add Destination</button></p>
-        </section>
-
-        <section id="origins">
-            <h1>Origins</h1>
-            {{#origins}}
-                <div>
-                    <span class="id">{{id}}. </span>
-                    <label class="name"><input value="{{name}}"></label>
-                    <label class="address"><input value="{{address}}"></label>
-                    <div class="details">
-                        <button on-click="update:{{this}}">Locate</button>
-                        {{#.formatted_address}}{{formatted_address}}{{/.formatted_address}}
-                    </div>
-                </div>
-            {{/origins}}
-            <p><button on-click="add-origin">Add Origin</button></p>
-
         </section>
     </section>
 
 </div>
 
 <section id="routes">
-    <h1>Routes</h1>
-    <label class="transit"><input type="checkbox" checked="{{showDriving}}"><img class="icon" src="/img/car.svg">Show </label>
-    <label class="transit"><input type="checkbox" checked="{{showWalking}}"><img class="icon" src="/img/walk.svg">Show </label>
-    <label class="transit"><input type="checkbox" checked="{{showBiking}}"><img class="icon" src="/img/bike.svg">Show </label>
-    <label class="transit"><input type="checkbox" checked="{{showTransit}}"><img class="icon" src="/img/transit.svg">Show </label>
+    <h1>Travel Time</h1>
+    <p>
+        Show:
+        <label><input type="checkbox" checked="{{showDriving}}"><img class="icon" src="/img/car.svg"> Driving</label>
+        <label><input type="checkbox" checked="{{showWalking}}"><img class="icon" src="/img/walk.svg"> Walking</label>
+        <label><input type="checkbox" checked="{{showBiking}}"><img class="icon" src="/img/bike.svg"> Biking</label>
+        <label><input type="checkbox" checked="{{showTransit}}"><img class="icon" src="/img/transit.svg"> Transit</label>
+    </p>
 
+    {{#origins:o}}
     <table class="{{#showWalking}}show-walking{{/showWalking}} {{#showBiking}}show-biking{{/showBiking}} {{#showTransit}}show-transit{{/showTransit}} {{#showDriving}}show-driving{{/showDriving}}">
         <tr>
-            <th></th>
-            {{#destinations}}
-                <th>{{name}}</th>
-            {{/destinations}}
+                <th>
+                    {{#formatted_address}}
+                    <a href="http://maps.google.com/maps?q={{formatted_address}}&layer=c&cbll={{latitude}},{{longitude}}" target="_blank">
+                        <img src="http://maps.googleapis.com/maps/api/streetview?size=200x150&location={{formatted_address}}&sensor=false" width="100" height="75">
+                    </a>
+                    {{/formatted_address}}
+                </th>
+                <th colspan="4" class="origin">
+
+                    <span class="id">{{id}}</span>
+                    <label class="name"><input value="{{name}}"></label><br>
+                    <label class="address"><input value="{{address}}" on-change="update:{{this}}"></label><br>
+                    <button on-click="compute:{{this}}">Compute</button>
+                </th>
         </tr>
-        {{#origins:o}}
+        <tr>
+                <th></th>
+                <th>{{#showDriving}}<img class="icon" src="/img/car.svg">{{/showDriving}}</th>
+                <th>{{#showWalking}}<img class="icon" src="/img/walk.svg">{{/showWalking}}</th>
+                <th>{{#showBiking}}<img class="icon" src="/img/bike.svg">{{/showBiking}}</th>
+                <th>{{#showTransit}}<img class="icon" src="/img/transit.svg">{{/showTransit}}</th>
+        </tr>
+        {{#destinations:d}}
             {{#formatted_address}}
             <tr>
-                <th rowspan="4">{{name}} <button on-click="compute:{{this}}">Compute</button></th>
-                {{#destinations:d}}
+                    <th>{{destinations[d].name}}</th>
                     <td class="{{#driving}}driving{{/driving}}">
                         {{#driving}}
                             <a href="{{directionsLink(origins[o],destinations[d],'drive')}}" target="_blank" class="drive route">
-                                <img class="icon" src="/img/car.svg">{{#distances[origins[o].formatted_address]}}{{#.drive}}<span class="{{timeClass(duration,2)}}">{{shortenTime(duration.text)}} - {{distance.text}}</span>{{/.drive}}{{/distances[origins[o].formatted_address]}}
+                                {{#distances[origins[o].formatted_address]}}{{#.drive}}<span class="{{timeClass(duration,2)}}" title="{{distance.text}}">{{shortenTime(duration.text)}}</span>{{/.drive}}{{^.drive}}...{{/.drive}}{{/distances[origins[o].formatted_address]}}
                             </a>
                         {{/driving}}
                     </td>
-                {{/destinations}}
-            </tr>
-            <tr>
-                {{#destinations:d}}
                     <td class="{{#walking}}walking{{/walking}}">
                         {{#walking}}
                             <a href="{{directionsLink(origins[o],destinations[d],'walk')}}" target="_blank" class="walk route">
-                                <img class="icon" src="/img/walk.svg">{{#distances[origins[o].formatted_address]}}{{#.walk}}<span class="{{timeClass(duration,2)}}">{{shortenTime(duration.text)}} - {{distance.text}}</span>{{/.walk}}{{/distances[origins[o].formatted_address]}}
+                                {{#distances[origins[o].formatted_address]}}{{#.walk}}<span class="{{timeClass(duration,2)}}" title="{{distance.text}}">{{shortenTime(duration.text)}}</span>{{/.walk}}{{^.walk}}...{{/.walk}}{{/distances[origins[o].formatted_address]}}
                             </a>
                         {{/walking}}
                     </td>
-                {{/destinations}}
-            </tr>
-            <tr>
-                {{#destinations:d}}
                     <td class="{{#biking}}biking{{/biking}}">
                         {{#biking}}
                             <a href="{{directionsLink(origins[o],destinations[d],'bike')}}" target="_blank" class="bike route">
-                                <img class="icon" src="/img/bike.svg">{{#distances[origins[o].formatted_address]}}{{#.bike}}<span class="{{timeClass(duration,1)}}">{{shortenTime(duration.text)}} - {{distance.text}}</span>{{/.bike}}{{/distances[origins[o].formatted_address]}}
+                                {{#distances[origins[o].formatted_address]}}{{#.bike}}<span class="{{timeClass(duration,1)}}" title="{{distance.text}}">{{shortenTime(duration.text)}}</span>{{/.bike}}{{^.bike}}...{{/.bike}}{{/distances[origins[o].formatted_address]}}
                             </a>
                         {{/biking}}
                     </td>
-                {{/destinations}}
-            </tr>
-            <tr>
-                {{#destinations:d}}
                     <td class="{{#transiting}}transiting{{/transiting}}">
                         {{#transiting}}
                             <a href="{{directionsLink(origins[o],destinations[d],'transit')}}" target="_blank" class="transit route">
-                                <img class="icon" src="/img/transit.svg">{{#distances[origins[o].formatted_address]}}{{#.transit}}<span class="{{timeClass(duration,1)}}">{{shortenTime(duration.text)}} - {{distance.text}}</span>{{/.transit}}{{/distances[origins[o].formatted_address]}}
+                                {{#distances[origins[o].formatted_address]}}{{#.transit}}<span class="{{timeClass(duration,1)}}" title="{{distance.text}}">{{shortenTime(duration.text)}}</span>{{/.transit}}{{^.transit}}...{{/.transit}}{{/distances[origins[o].formatted_address]}}
                             </a>
                         {{/transiting}}
                     </td>
-                {{/destinations}}
             </tr>
             {{/formatted_address}}
-        {{/origins}}
+        {{/destinations}}
     </table>
+    {{/origins}}
+    <div>
+        <button on-click="add-origin">Add Origin...</button>
+    </div>
 </section>
 
 
@@ -180,13 +170,13 @@ component.exports = {
             compute(origin, destinations, 'transit', update);
         });
         this.on('update', function(context, location) {
-            if (location) {
+            if (location && location.address !== location.formatted_address) {
                 console.log(location);
                 window.geocoder.geocode({address: location.address}, function(results, status) {
                     if (status === google.maps.GeocoderStatus.OK) {
                         console.log("results", results);
                         var result = results[0];
-                        location.formatted_address = result.formatted_address;
+                        location.address = location.formatted_address = result.formatted_address;
                         location.latitude = result.geometry.location.lat();
                         location.longitude = result.geometry.location.lng();
                         self.update(context.keypath)
@@ -201,13 +191,14 @@ component.exports = {
 
 function compute(origin, destinations, type, update) {
     if (type === 'transit') {
+        // Distance matrix doesn't support transit trips
         return computeTransit(origin, destinations, update)
     }
 
     var targets = [];
     for (var i=0; i<destinations.length && targets.length<25; i++) {
         var dest = destinations[i];
-        if (dest[{walk:'walking',bike:'biking',drive:'driving'}[type]] && dest.formatted_address) {
+        if (dest[{walk:'walking',bike:'biking',drive:'driving',transit:'transiting'}[type]] && dest.formatted_address) {
             if (!dest.distances) {
                 dest.distances = {}
             }
@@ -233,7 +224,8 @@ function compute(origin, destinations, type, update) {
             travelMode: {
                     walk:google.maps.TravelMode.WALKING,
                     drive:google.maps.TravelMode.DRIVING,
-                    bike:google.maps.TravelMode.BICYCLING
+                    bike:google.maps.TravelMode.BICYCLING,
+                    transit:google.maps.TravelMode.TRANSIT
                 }[type],
             unitSystem: google.maps.UnitSystem.IMPERIAL,
             durationInTraffic: false,
@@ -263,7 +255,7 @@ function compute(origin, destinations, type, update) {
 function computeTransit(origin, destinations, update) {
     for (var i=0; i<destinations.length; i++) {
         var dest = destinations[i];
-        if (!dest.transit || !dest.formatted_address) {
+        if (!dest.transiting || !dest.formatted_address) {
             continue;
         }
         if (!dest.distances) {
@@ -292,18 +284,15 @@ function computeTransit(origin, destinations, update) {
         };
         console.log("public transit from",origin.formatted_address,"to",dest.formatted_address, request)
         window.directionsService.route(request, function(response, status) {
-            console.log(JSON.stringify(response,null,2));
             d.loading--;
             if (status !== google.maps.DistanceMatrixStatus.OK) {
-                console.error('Error was: ' + status);
-                setTimeout(function() {
-                    computeTransit(origin, destinations, update);
-                }, 20000);
+                alert('Error was: ' + status + '\n\nClick Compute to try again');
             } else {
                 d.transit = {
-                    duration:routes[0].legs[0].duration,
-                    distance:routes[0].legs[0].distance
+                    duration:response.routes[0].legs[0].duration,
+                    distance:response.routes[0].legs[0].distance
                 };
+                console.log("transit = ", d.transit);
 
                 setTimeout(function() {
                     computeTransit(origin, destinations, update);

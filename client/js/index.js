@@ -91,18 +91,18 @@ function addPins() {
         var marker = new google.maps.Marker({
             map: map,
             position: point,
-            icon: icon(dest.id,'FF0000')
+            icon: icon(dest.id,color)
         });
         return point;
     }
     ui.get('destinations').forEach(function(dest) {
         if (dest.formatted_address) {
-            addPin(dest, 'FF0000');
+            addPin(dest, 'be80ff');
         }
     });
     ui.get('origins').forEach(function(orig) {
         if (orig.formatted_address) {
-            bounds.extend(addPin(orig, '00FF00'));
+            bounds.extend(addPin(orig, '4bffa9'));
         }
     });
     map.fitBounds(bounds);
