@@ -1,0 +1,317 @@
+
+<div id="top">
+    <section id="map">
+        <div id="map-canvas"></div>
+    </section>
+
+    <section id="input">
+
+        <section id="destinations">
+            <h1>Destinations</h1>
+            {{#destinations:d}}
+                <div>
+                    <span class="id">{{id}}. </span>
+                    <label class="name"><input placeholder="Name..." value="{{name}}"></label>
+                    <label class="address"><input placeholder="Address..." value="{{address}}"></label>
+                    <label class="transit"><input type="checkbox" checked="{{.driving}}"><img class="icon" src="/img/car.svg"></label>
+                    <label class="transit"><input type="checkbox" checked="{{.walking}}"><img class="icon" src="/img/walk.svg"></label>
+                    <label class="transit"><input type="checkbox" checked="{{.biking}}"><img class="icon" src="/img/bike.svg"></label>
+                    <label class="transit"><input type="checkbox" checked="{{.transiting}}"><img class="icon" src="/img/transit.svg"></label>
+                    <div class="details">
+                        <button on-click="update:{{this}}">Locate</button>
+                        {{#.formatted_address}}{{formatted_address}}{{/.formatted_address}}
+                    </div>
+                </div>
+            {{/destinations}}
+            <p><button on-click="add-destination">Add Destination</button></p>
+        </section>
+
+        <section id="origins">
+            <h1>Origins</h1>
+            {{#origins}}
+                <div>
+                    <span class="id">{{id}}. </span>
+                    <label class="name"><input value="{{name}}"></label>
+                    <label class="address"><input value="{{address}}"></label>
+                    <div class="details">
+                        <button on-click="update:{{this}}">Locate</button>
+                        {{#.formatted_address}}{{formatted_address}}{{/.formatted_address}}
+                    </div>
+                </div>
+            {{/origins}}
+            <p><button on-click="add-origin">Add Origin</button></p>
+
+        </section>
+    </section>
+
+</div>
+
+<section id="routes">
+    <h1>Routes</h1>
+    <label class="transit"><input type="checkbox" checked="{{showDriving}}"><img class="icon" src="/img/car.svg">Show </label>
+    <label class="transit"><input type="checkbox" checked="{{showWalking}}"><img class="icon" src="/img/walk.svg">Show </label>
+    <label class="transit"><input type="checkbox" checked="{{showBiking}}"><img class="icon" src="/img/bike.svg">Show </label>
+    <label class="transit"><input type="checkbox" checked="{{showTransit}}"><img class="icon" src="/img/transit.svg">Show </label>
+
+    <table class="{{#showWalking}}show-walking{{/showWalking}} {{#showBiking}}show-biking{{/showBiking}} {{#showTransit}}show-transit{{/showTransit}} {{#showDriving}}show-driving{{/showDriving}}">
+        <tr>
+            <th></th>
+            {{#destinations}}
+                <th>{{name}}</th>
+            {{/destinations}}
+        </tr>
+        {{#origins:o}}
+            {{#formatted_address}}
+            <tr>
+                <th rowspan="4">{{name}} <button on-click="compute:{{this}}">Compute</button></th>
+                {{#destinations:d}}
+                    <td class="{{#driving}}driving{{/driving}}">
+                        {{#driving}}
+                            <a href="{{directionsLink(origins[o],destinations[d],'drive')}}" target="_blank" class="drive route">
+                                <img class="icon" src="/img/car.svg">{{#distances[origins[o].formatted_address]}}{{#.drive}}<span class="{{timeClass(duration,2)}}">{{shortenTime(duration.text)}} - {{distance.text}}</span>{{/.drive}}{{/distances[origins[o].formatted_address]}}
+                            </a>
+                        {{/driving}}
+                    </td>
+                {{/destinations}}
+            </tr>
+            <tr>
+                {{#destinations:d}}
+                    <td class="{{#walking}}walking{{/walking}}">
+                        {{#walking}}
+                            <a href="{{directionsLink(origins[o],destinations[d],'walk')}}" target="_blank" class="walk route">
+                                <img class="icon" src="/img/walk.svg">{{#distances[origins[o].formatted_address]}}{{#.walk}}<span class="{{timeClass(duration,2)}}">{{shortenTime(duration.text)}} - {{distance.text}}</span>{{/.walk}}{{/distances[origins[o].formatted_address]}}
+                            </a>
+                        {{/walking}}
+                    </td>
+                {{/destinations}}
+            </tr>
+            <tr>
+                {{#destinations:d}}
+                    <td class="{{#biking}}biking{{/biking}}">
+                        {{#biking}}
+                            <a href="{{directionsLink(origins[o],destinations[d],'bike')}}" target="_blank" class="bike route">
+                                <img class="icon" src="/img/bike.svg">{{#distances[origins[o].formatted_address]}}{{#.bike}}<span class="{{timeClass(duration,1)}}">{{shortenTime(duration.text)}} - {{distance.text}}</span>{{/.bike}}{{/distances[origins[o].formatted_address]}}
+                            </a>
+                        {{/biking}}
+                    </td>
+                {{/destinations}}
+            </tr>
+            <tr>
+                {{#destinations:d}}
+                    <td class="{{#transiting}}transiting{{/transiting}}">
+                        {{#transiting}}
+                            <a href="{{directionsLink(origins[o],destinations[d],'transit')}}" target="_blank" class="transit route">
+                                <img class="icon" src="/img/transit.svg">{{#distances[origins[o].formatted_address]}}{{#.transit}}<span class="{{timeClass(duration,1)}}">{{shortenTime(duration.text)}} - {{distance.text}}</span>{{/.transit}}{{/distances[origins[o].formatted_address]}}
+                            </a>
+                        {{/transiting}}
+                    </td>
+                {{/destinations}}
+            </tr>
+            {{/formatted_address}}
+        {{/origins}}
+    </table>
+</section>
+
+
+<script>
+
+component.exports = {
+    data: {
+        timeClass: function(duration, factor) {
+            if (duration.value < 5*60 * factor) {
+                return 'fast';
+            }
+            if (duration.value < 10*60 * factor) {
+                return 'moderate';
+            }
+            if (duration.value < 15*60 * factor) {
+                return 'ok';
+            }
+            if (duration.value < 20*60 * factor) {
+                return 'slow';
+            }
+            return 'bad';
+        },
+        shortenTime: function(time) {
+            return time.replace(/ hours?/,"h").replace(/ mins?/, "m")
+        },
+        directionsLink: function(origin, destination, type) {
+            return "https://maps.google.com/maps?t=m&saddr="+encodeURIComponent(origin.formatted_address)+
+                    '&daddr='+encodeURIComponent(destination.formatted_address)+
+                    '&dirflg='+({
+                        walk:'w',
+                        bike:'b',
+                        transit:'r',
+                        drive:'d'
+                    }[type])
+        }
+    },
+    init: function() {
+        var self = this;
+        this.on('add-destination', function () {
+            var destinations = this.get("destinations");
+            destinations.push({
+                id:destinations.length+1,
+                name:"",
+                address:"",
+                walking:true,
+                biking:true,
+                transit:true
+            });
+            this.update();
+        });
+        this.on('add-origin', function () {
+            var origins = this.get("origins");
+            origins.push({
+                id:origins.length+1,
+                name:"",
+                address:""
+            });
+            this.update();
+        });
+        this.on('compute', function(context, origin) {
+            var destinations = this.get("destinations");
+            function update() {
+                self.update()
+            }
+            compute(origin, destinations, 'walk', update);
+            compute(origin, destinations, 'bike', update);
+            compute(origin, destinations, 'drive', update);
+            compute(origin, destinations, 'transit', update);
+        });
+        this.on('update', function(context, location) {
+            if (location) {
+                console.log(location);
+                window.geocoder.geocode({address: location.address}, function(results, status) {
+                    if (status === google.maps.GeocoderStatus.OK) {
+                        console.log("results", results);
+                        var result = results[0];
+                        location.formatted_address = result.formatted_address;
+                        location.latitude = result.geometry.location.lat();
+                        location.longitude = result.geometry.location.lng();
+                        self.update(context.keypath)
+                    } else {
+                        alert('Geocode was not successful for the following reason: ' + status);
+                    }
+                });
+            }
+        })
+    }
+};
+
+function compute(origin, destinations, type, update) {
+    if (type === 'transit') {
+        return computeTransit(origin, destinations, update)
+    }
+
+    var targets = [];
+    for (var i=0; i<destinations.length && targets.length<25; i++) {
+        var dest = destinations[i];
+        if (dest[{walk:'walking',bike:'biking',drive:'driving'}[type]] && dest.formatted_address) {
+            if (!dest.distances) {
+                dest.distances = {}
+            }
+            var d = dest.distances[origin.formatted_address];
+            if (!d) {
+                d = dest.distances[origin.formatted_address] = {};
+            }
+            if (!d[type]) {
+                d.loading = d.loading ? d.loading+1 : 1;
+                targets.push(dest);
+            }
+        }
+    }
+    if (targets.length) {
+        update();
+        var latlngs = targets.map(function(dest) {
+            return new google.maps.LatLng(dest.latitude,dest.longitude)
+        });
+        console.log("distance matrix ["+type+']',latlngs);
+        window.distanceMatrix.getDistanceMatrix({
+            origins: [new google.maps.LatLng(origin.latitude, origin.longitude)],
+            destinations: latlngs,
+            travelMode: {
+                    walk:google.maps.TravelMode.WALKING,
+                    drive:google.maps.TravelMode.DRIVING,
+                    bike:google.maps.TravelMode.BICYCLING
+                }[type],
+            unitSystem: google.maps.UnitSystem.IMPERIAL,
+            durationInTraffic: false,
+            avoidHighways: false,
+            avoidTolls: false
+        }, function(response, status) {
+            if (status !== google.maps.DistanceMatrixStatus.OK) {
+                alert('Error was: ' + status);
+            } else {
+                var origins = response.originAddresses;
+                for (var i = 0; i < origins.length; i++) {
+                    var results = response.rows[i].elements;
+                    for (var j = 0; j < results.length; j++) {
+                        var d = targets[j].distances[origin.formatted_address]
+                        if (d.loading) {
+                            d.loading--
+                        }
+                        d[type] = results[j];
+                    }
+                }
+                update();
+            }
+        });
+    }
+}
+
+function computeTransit(origin, destinations, update) {
+    for (var i=0; i<destinations.length; i++) {
+        var dest = destinations[i];
+        if (!dest.transit || !dest.formatted_address) {
+            continue;
+        }
+        if (!dest.distances) {
+            dest.distances = {};
+        }
+        var d = dest.distances[origin.formatted_address];
+        if (!d) {
+            d = dest.distances[origin.formatted_address] = {};
+        }
+        if (d.transit) {
+            continue;
+        }
+        if (d.loading) {
+            d.loading++
+        } else {
+            d.loading = 1
+        }
+        update();
+        var request = {
+            origin:new google.maps.LatLng(origin.latitude, origin.longitude),
+            destination:new google.maps.LatLng(dest.latitude, dest.longitude),
+            travelMode: google.maps.TravelMode.TRANSIT,
+            transitOptions: {
+                departureTime: new Date(2014, 2, 3, 8, 0, 0, 0)
+            }
+        };
+        console.log("public transit from",origin.formatted_address,"to",dest.formatted_address, request)
+        window.directionsService.route(request, function(response, status) {
+            console.log(JSON.stringify(response,null,2));
+            d.loading--;
+            if (status !== google.maps.DistanceMatrixStatus.OK) {
+                console.error('Error was: ' + status);
+                setTimeout(function() {
+                    computeTransit(origin, destinations, update);
+                }, 20000);
+            } else {
+                d.transit = {
+                    duration:routes[0].legs[0].duration,
+                    distance:routes[0].legs[0].distance
+                };
+
+                setTimeout(function() {
+                    computeTransit(origin, destinations, update);
+                }, 5000);
+            }
+            update();
+        });
+        break;
+    }
+}
+</script>

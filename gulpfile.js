@@ -2,7 +2,6 @@ var gulp = require('gulp');
 
 var clean = require('gulp-clean');
 var livereload = require('gulp-livereload');
-var filesize = require('gulp-filesize');
 
 var jshint = require('gulp-jshint');
 var watchify = require('./gulp-watchify');
@@ -73,9 +72,12 @@ function markAsFailed(err) {
 gulp.task('browserify', watchify(function scriptsTask(watchify) {
     return gulp.src(paths.client.browserify.src)
         .pipe(watchify({
-            watch:watching
+            watch:watching,
+            configure:function(b) {
+                b.transform('ractify');
+            }
         }))
-        .pipe(uglify())
+//        .pipe(uglify())
         .pipe(gulp.dest(paths.client.browserify.dest))
         .on('error', markAsFailed);
 }));
@@ -96,6 +98,7 @@ gulp.task('lint-js', function(){
 gulp.task('css', function() {
     return gulp.src(paths.client.css.src)
         .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
+        .on('error', markAsFailed)
         .pipe(csso())
         .pipe(gulp.dest(paths.client.css.dest))
         .on('error', markAsFailed);

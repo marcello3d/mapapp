@@ -12,17 +12,22 @@ module.exports = function(taskCallback) {
         if (cache[path]) {
             return cache[path];
         }
+        var bundle;
         if (opt.watch !== false) {
-            var bundle = watchify(opt);
+            bundle = watchify(opt);
             bundle.updateStatus = 'first';
             cache[path] = bundle;
             bundle.on('update', function() {
                 bundle.updateStatus = 'updated';
                 taskCallback(plugin);
             });
-            return bundle;
+        } else {
+            bundle = watchify.browserify(opt);
         }
-        return watchify.browserify(opt);
+        if (opt.configure) {
+            opt.configure(bundle);
+        }
+        return bundle;
     }
     function plugin(opt) {
         return through.obj(function(file, enc, callback){

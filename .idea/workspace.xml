@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fd8dae8c-745b-4581-b255-f75bb2994ed8" name="Default" comment="" />
+    <ignored path="gulpwebapp.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="gulpwebapp" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/js/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="90" column="21" selection-start="2467" selection-end="2467" vertical-scroll-proportion="0.0" vertical-offset="834" max-vertical-offset="1540">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ui.ract" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/js/lib/ui.ract">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="269" column="32" selection-start="11844" selection-end="11844" vertical-scroll-proportion="1.295082" vertical-offset="2090" max-vertical-offset="3542">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="0" selection-start="230" selection-end="230" vertical-scroll-proportion="-6.0" vertical-offset="0" max-vertical-offset="253">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Ractive.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node_modules/ractify/node_modules/ractive/build/Ractive.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8298" column="94" selection-start="245664" selection-end="245664" vertical-scroll-proportion="0.0" vertical-offset="90585" max-vertical-offset="115203">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/js/lib/test.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="476" column="16" selection-start="0" selection-end="113578" vertical-scroll-proportion="-2.7631578" vertical-offset="5026" max-vertical-offset="34210">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test2.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/js/lib/test2.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="145" column="17" selection-start="5446" selection-end="5450" vertical-scroll-proportion="1.1914893" vertical-offset="1651" max-vertical-offset="34232">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/css/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="100" column="20" selection-start="1470" selection-end="1470" vertical-scroll-proportion="0.0" vertical-offset="603" max-vertical-offset="1309">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/build/css/main.css" />
+        <option value="$PROJECT_DIR$/client/foobar.js" />
+        <option value="$PROJECT_DIR$/.jshint" />
+        <option value="$PROJECT_DIR$/.jshintrc" />
+        <option value="$PROJECT_DIR$/node_modules/gulp-filesize/index.js" />
+        <option value="$PROJECT_DIR$/node_modules/gulp-streamify/src/index.js" />
+        <option value="$PROJECT_DIR$/node_modules/gulp-uglify/index.js" />
+        <option value="$PROJECT_DIR$/node_modules/gulp-buffer/index.js" />
+        <option value="$PROJECT_DIR$/gulp-buffer.js" />
+        <option value="$PROJECT_DIR$/node_modules/watchify/index.js" />
+        <option value="$PROJECT_DIR$/node_modules/watchify/node_modules/browserify/node_modules/browser-pack/node_modules/combine-source-map/node_modules/convert-source-map/index.js" />
+        <option value="$PROJECT_DIR$/node_modules/watchify/node_modules/browserify/node_modules/browser-pack/node_modules/combine-source-map/node_modules/inline-source-map/index.js" />
+        <option value="$PROJECT_DIR$/node_modules/watchify/node_modules/browserify/node_modules/browser-pack/node_modules/combine-source-map/index.js" />
+        <option value="$PROJECT_DIR$/node_modules/watchify/node_modules/browserify/node_modules/browser-pack/index.js" />
+        <option value="$PROJECT_DIR$/node_modules/watchify/node_modules/browserify/index.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/gulp-uglify.js" />
+        <option value="$PROJECT_DIR$/LICENSE" />
+        <option value="$PROJECT_DIR$/client/js/lib/foobar.js" />
+        <option value="$PROJECT_DIR$/client/js/test.js" />
+        <option value="$PROJECT_DIR$/client/js/lib/routes.js" />
+        <option value="$PROJECT_DIR$/gulp-watchify.js" />
+        <option value="$PROJECT_DIR$/gulpfile.js" />
+        <option value="$PROJECT_DIR$/node_modules/ractive/build/Ractive.js" />
+        <option value="$PROJECT_DIR$/node_modules/ractify/node_modules/ractive/build/Ractive.js" />
+        <option value="$PROJECT_DIR$/client/index.html" />
+        <option value="$PROJECT_DIR$/client/js/lib/test.json" />
+        <option value="$PROJECT_DIR$/client/js/lib/test2.json" />
+        <option value="$PROJECT_DIR$/client/js/index.js" />
+        <option value="$PROJECT_DIR$/client/js/lib/ui.ract" />
+        <option value="$PROJECT_DIR$/client/css/main.css" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="22" />
+    <option name="width" value="1280" />
+    <option name="height" value="774" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gulpwebapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gulpwebapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mapapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gulpwebapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mapapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gulpwebapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mapapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gulpwebapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mapapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gulpwebapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mapapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gulpwebapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mapapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="options.lastSelected" value="preferences.fileTypes" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="FullScreen" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="last_opened_file_path" value="/Volumes/Personal/Dropbox/Home/workspace/node-ractify" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="SearchEverywhereHistory" value="" />
+    <property name="LayoutCode.rearrangeEntriesJSON" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/js/lib" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.ui.ract">
+    <configuration default="false" name="ui.ract" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true" temporary="true" uri="http://localhost:63343/gulpwebapp/js/lib/ui.ract">
+      <RunnerSettings RunnerId="JavascriptDebugRunner" />
+      <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
+      <method />
+    </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="name" value="Dart" />
+      <option name="saveOutputToFile" value="false" />
+      <option name="showConsoleOnStdErr" value="false" />
+      <option name="showConsoleOnStdOut" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
+      <setting name="configLocationType" value="CONFIG_FILE" />
+      <setting name="settingsFile" value="" />
+      <setting name="serverType" value="INTERNAL" />
+      <setting name="preferredDebugBrowser" value="CHROME" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="$USER_HOME$/.nvm/v0.10.26/bin/node" working-dir="">
+      <browser start="false" url="" with-js-debugger="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="serve" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="$USER_HOME$/.nvm/v0.10.21/bin/node" path-to-js-file="node_modules/gulp/bin/gulp.js" application-parameters="serve" working-dir="$PROJECT_DIR$">
+      <browser start="false" url="" with-js-debugger="false" />
+      <RunnerSettings RunnerId="NodeJS.debug" />
+      <RunnerSettings RunnerId="NodeJS.run" />
+      <ConfigurationWrapper RunnerId="NodeJS.debug" />
+      <ConfigurationWrapper RunnerId="NodeJS.run" />
+      <method />
+    </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Node.js.serve" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.ui.ract" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.ui.ract" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fd8dae8c-745b-4581-b255-f75bb2994ed8" name="Default" comment="" />
+      <created>1393180356027</created>
+      <updated>1393180356027</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="22" width="1280" height="774" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.171875" sideWeight="0.499316" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3994528" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17227878" sideWeight="0.500684" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32968536" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32831737" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USERS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <default-breakpoints>
+        <breakpoint suspend="NONE" type="javascript-exception">
+          <properties />
+        </breakpoint>
+      </default-breakpoints>
+      <option name="time" value="3" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/node_modules/watchify/node_modules/browserify/node_modules/browser-pack/node_modules/combine-source-map/node_modules/convert-source-map/test/comment-regex.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="22" selection-start="264" selection-end="264" vertical-scroll-proportion="0.24282561" vertical-offset="0" max-vertical-offset="1166" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/watchify/node_modules/browserify/node_modules/browser-pack/node_modules/combine-source-map/node_modules/convert-source-map/example/comment-to-json.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="20" selection-start="84" selection-end="84" vertical-scroll-proportion="0.121412806" vertical-offset="0" max-vertical-offset="453" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/watchify/node_modules/browserify/node_modules/browser-pack/node_modules/combine-source-map/node_modules/convert-source-map/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="14" selection-start="1774" selection-end="1774" vertical-scroll-proportion="0.33261803" vertical-offset="505" max-vertical-offset="1551" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/watchify/node_modules/browserify/node_modules/browser-pack/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="32" selection-start="1251" selection-end="1261" vertical-scroll-proportion="-11.0" vertical-offset="209" max-vertical-offset="1133" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/gulp-jshint/node_modules/jshint/src/jshint.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="18" selection-start="2545" selection-end="2545" vertical-scroll-proportion="0.36710718" vertical-offset="454" max-vertical-offset="56683" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/gulp-jshint/node_modules/jshint/src/cli.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6644" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/gulp-jshint/node_modules/jshint/bin/jshint">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="21" selection-start="42" selection-end="42" vertical-scroll-proportion="0.031161472" vertical-offset="0" max-vertical-offset="706" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/gulp/node_modules/vinyl-fs/node_modules/glob-stream/node_modules/minimatch/minimatch.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="826" column="0" selection-start="21378" selection-end="21378" vertical-scroll-proportion="-0.37677053" vertical-offset="9352" max-vertical-offset="11671" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/watchify/node_modules/browserify/node_modules/path-browserify/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="3" selection-start="1924" selection-end="1924" vertical-scroll-proportion="0.059490085" vertical-offset="255" max-vertical-offset="2321" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/gulp/node_modules/orchestrator/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="8" selection-start="72" selection-end="74" vertical-scroll-proportion="0.080763586" vertical-offset="0" max-vertical-offset="3410" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/gulp/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="18" selection-start="914" selection-end="914" vertical-scroll-proportion="0.5714286" vertical-offset="0" max-vertical-offset="693" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/gulp-util/lib/log.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="706" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/gulp-util/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="22" selection-start="193" selection-end="193" vertical-scroll-proportion="0.07790368" vertical-offset="0" max-vertical-offset="706" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/gulp-jshint/node_modules/jshint/src/reporters/checkstyle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="23" selection-start="714" selection-end="714" vertical-scroll-proportion="0.5141643" vertical-offset="0" max-vertical-offset="957" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/gulp-jshint/node_modules/jshint/src/reporters/default.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="706" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/gulp-jshint/node_modules/jshint/src/reporters/jslint_xml.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="24" selection-start="247" selection-end="272" vertical-scroll-proportion="0.26487252" vertical-offset="0" max-vertical-offset="706" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/gulp-jshint/node_modules/jshint/src/reporters/non_error.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="706" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/gulp-jshint/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="98" column="13" selection-start="2505" selection-end="2505" vertical-scroll-proportion="0.56373936" vertical-offset="680" max-vertical-offset="1386" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/uglify-js/lib/compress.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="774" column="0" selection-start="33692" selection-end="33692" vertical-scroll-proportion="0.33333334" vertical-offset="8376" max-vertical-offset="26004" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/WebStorm7/extLibs/nodejs-v0.10.21-src/core-modules-sources/lib/events.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="0" selection-start="3222" selection-end="3222" vertical-scroll-proportion="0.33333334" vertical-offset="687" max-vertical-offset="3047" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/WebStorm7/extLibs/nodejs-v0.10.21-src/core-modules-sources/lib/stream.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="0" selection-start="1853" selection-end="1853" vertical-scroll-proportion="0.33333334" vertical-offset="203" max-vertical-offset="1254" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/watchify/node_modules/browserify/node_modules/syntax-error/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="146" selection-end="146" vertical-scroll-proportion="0.1594203" vertical-offset="0" max-vertical-offset="660" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/watchify/node_modules/browserify/node_modules/deps-sort/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="0" selection-start="700" selection-end="700" vertical-scroll-proportion="0.6642512" vertical-offset="0" max-vertical-offset="506" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/watchify/node_modules/through/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="0" selection-start="1023" selection-end="1023" vertical-scroll-proportion="0.17391305" vertical-offset="346" max-vertical-offset="1254" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/gulp-imagemin/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="29" selection-start="704" selection-end="704" vertical-scroll-proportion="0.5760599" vertical-offset="0" max-vertical-offset="682" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/gulp-livereload/node_modules/tiny-lr/lib/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="706" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/gulp-livereload/node_modules/tiny-lr/readme.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="47" selection-start="135" selection-end="135" vertical-scroll-proportion="0.06461087" vertical-offset="0" max-vertical-offset="4323" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="28" selection-start="345" selection-end="345" vertical-scroll-proportion="0.0" vertical-offset="121" max-vertical-offset="451" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.jshintrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="706" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="5" selection-start="18" selection-end="18" vertical-scroll-proportion="0.015580736" vertical-offset="0" max-vertical-offset="706" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/gulp-livereload/gulp-livereload.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="28" selection-start="201" selection-end="201" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="671" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/page/test/tests.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="100" column="0" selection-start="2338" selection-end="2338" vertical-scroll-proportion="0.61048156" vertical-offset="669" max-vertical-offset="1375" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/page/test/chai.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-13.742209" vertical-offset="9702" max-vertical-offset="37488" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/page/test/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="706" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="706" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/page/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4950" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulp-uglify.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="14" selection-end="14" vertical-scroll-proportion="-0.4490085" vertical-offset="328" max-vertical-offset="1034" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/watchify/node_modules/browserify/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="19" selection-start="1941" selection-end="1950" vertical-scroll-proportion="-1.7400881" vertical-offset="1889" max-vertical-offset="8217" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/watchify/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="60" selection-start="310" selection-end="310" vertical-scroll-proportion="0.15580736" vertical-offset="0" max-vertical-offset="1672" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/gulp-livereload/node_modules/tiny-lr/lib/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="101" column="0" selection-start="2957" selection-end="2957" vertical-scroll-proportion="0.19546743" vertical-offset="973" max-vertical-offset="2354" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulp-watchify.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="61" selection-start="1007" selection-end="1007" vertical-scroll-proportion="0.4858357" vertical-offset="31" max-vertical-offset="748" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/ractive/build/Ractive.runtime.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2550" column="18" selection-start="71825" selection-end="71825" vertical-scroll-proportion="0.4476048" vertical-offset="27751" max-vertical-offset="90706" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="35" selection-start="1866" selection-end="1866" vertical-scroll-proportion="-0.1904762" vertical-offset="957" max-vertical-offset="2013" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/ractive/build/Ractive.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8296" column="28" selection-start="245528" selection-end="245528" vertical-scroll-proportion="0.0" vertical-offset="91256" max-vertical-offset="115555">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="230" selection-end="230" vertical-scroll-proportion="-6.0" vertical-offset="0" max-vertical-offset="253">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/js/lib/test.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="476" column="16" selection-start="0" selection-end="113578" vertical-scroll-proportion="-2.7631578" vertical-offset="5026" max-vertical-offset="34210">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/ractify/node_modules/ractive/build/Ractive.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8298" column="94" selection-start="245664" selection-end="245664" vertical-scroll-proportion="0.0" vertical-offset="90585" max-vertical-offset="115203">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="90" column="21" selection-start="2467" selection-end="2467" vertical-scroll-proportion="0.0" vertical-offset="834" max-vertical-offset="1540">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/js/lib/test2.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="145" column="17" selection-start="5446" selection-end="5450" vertical-scroll-proportion="1.1914893" vertical-offset="1651" max-vertical-offset="34232">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="100" column="20" selection-start="1470" selection-end="1470" vertical-scroll-proportion="0.0" vertical-offset="603" max-vertical-offset="1309">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/js/lib/ui.ract">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="269" column="32" selection-start="11844" selection-end="11844" vertical-scroll-proportion="1.295082" vertical-offset="2090" max-vertical-offset="3542">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+
