@@ -83,7 +83,7 @@ function addPins() {
         return
     }
     var bounds = new google.maps.LatLngBounds();
-    function addPin(dest, color) {
+    function addPin(dest, index, color) {
         if (pinCache[dest.formatted_address]) {
             return pinCache[dest.formatted_address];
         }
@@ -91,18 +91,18 @@ function addPins() {
         var marker = new google.maps.Marker({
             map: map,
             position: point,
-            icon: icon(dest.id,color)
+            icon: icon(index,color)
         });
         return point;
     }
-    ui.get('destinations').forEach(function(dest) {
+    ui.get('destinations').forEach(function(dest, index) {
         if (dest.formatted_address) {
-            addPin(dest, 'be80ff');
+            addPin(dest, index+1, 'be80ff');
         }
     });
-    ui.get('origins').forEach(function(orig) {
+    ui.get('origins').forEach(function(orig, index) {
         if (orig.formatted_address) {
-            bounds.extend(addPin(orig, '4bffa9'));
+            bounds.extend(addPin(orig, index+1, '4bffa9'));
         }
     });
     map.fitBounds(bounds);

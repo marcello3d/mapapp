@@ -10,7 +10,8 @@
             <h1>Destinations</h1>
             {{#destinations:d}}
                 <div>
-                    <span class="id">{{id}}</span>
+                    <span class="id">{{d+1}}</span>
+                    <span class="print-only"><b>{{name}}</b></span>
                     <label class="name"><input placeholder="Name..." value="{{name}}"></label>
                     <label class="address"><input placeholder="Address..." value="{{address}}" on-change="update:{{this}}"></label>
                     <label class="transit"><input type="checkbox" checked="{{.driving}}"><img class="icon" src="/img/car.svg"></label>
@@ -20,6 +21,19 @@
                 </div>
             {{/destinations}}
             <p><button on-click="add-destination">Add Destination</button></p>
+        </section>
+        <section id="origins">
+            <h1>Origins</h1>
+            {{#origins:o}}
+            <div class="origin">
+                <span class="id">{{o+1}}</span>
+                <span class="print-only"><b>{{address}}</b></span>
+                <label class="name"><input value="{{name}}"></label>
+                <label class="address"><input value="{{address}}" on-change="update:{{this}}"></label>
+            </div>
+            {{/origins}}
+            <p><button on-click="add-origin">Add Origin</button></p>
+
         </section>
     </section>
 
@@ -48,9 +62,14 @@
                 <th colspan="4" class="origin">
 
                     <span class="id">{{id}}</span>
+                    <span class="print-only"><b>{{address}}</b></span>
                     <label class="name"><input value="{{name}}"></label><br>
                     <label class="address"><input value="{{address}}" on-change="update:{{this}}"></label><br>
                     <button on-click="compute:{{this}}">Compute</button>
+                    <a href="http://www.trulia.com/validate.php?hsb=1&tst=h&locationId=&topnav_extra=&q=&search={{address}}" target="_blank">Trulia</a>
+                    <a href="http://maps.google.com/maps?q={{formatted_address}}" target="_blank">Google</a>
+                    <a href="http://www.walkscore.com/score/{{formatted_address}}" target="_blank">Walk Score</a>
+
                 </th>
         </tr>
         <tr>
@@ -88,7 +107,7 @@
                     <td class="{{#transiting}}transiting{{/transiting}}">
                         {{#transiting}}
                             <a href="{{directionsLink(origins[o],destinations[d],'transit')}}" target="_blank" class="transit route">
-                                {{#distances[origins[o].formatted_address]}}{{#.transit}}<span class="{{timeClass(duration,1)}}" title="{{distance.text}}">{{shortenTime(duration.text)}}</span>{{/.transit}}{{^.transit}}...{{/.transit}}{{/distances[origins[o].formatted_address]}}
+                                {{#distances[origins[o].formatted_address]}}{{#.transit}}<span class="{{timeClass(duration,2)}}" title="{{distance.text}}">{{shortenTime(duration.text)}}</span>{{/.transit}}{{^.transit}}...{{/.transit}}{{/distances[origins[o].formatted_address]}}
                             </a>
                         {{/transiting}}
                     </td>
@@ -141,9 +160,9 @@ component.exports = {
         this.on('add-destination', function () {
             var destinations = this.get("destinations");
             destinations.push({
-                id:destinations.length+1,
                 name:"",
                 address:"",
+                driving:true,
                 walking:true,
                 biking:true,
                 transit:true
@@ -153,7 +172,6 @@ component.exports = {
         this.on('add-origin', function () {
             var origins = this.get("origins");
             origins.push({
-                id:origins.length+1,
                 name:"",
                 address:""
             });
@@ -170,7 +188,7 @@ component.exports = {
             compute(origin, destinations, 'transit', update);
         });
         this.on('update', function(context, location) {
-            if (location && location.address !== location.formatted_address) {
+            if (location && location.address && location.address !== location.formatted_address) {
                 console.log(location);
                 window.geocoder.geocode({address: location.address}, function(results, status) {
                     if (status === google.maps.GeocoderStatus.OK) {
@@ -179,11 +197,19 @@ component.exports = {
                         location.address = location.formatted_address = result.formatted_address;
                         location.latitude = result.geometry.location.lat();
                         location.longitude = result.geometry.location.lng();
+                        if (!location.name) {
+                            location.name = location.address.replace(/^([\S]+\s+[\S]+).*$/, '$1')
+                        }
                         self.update(context.keypath)
                     } else {
                         alert('Geocode was not successful for the following reason: ' + status);
                     }
                 });
+            }
+            if (location && !location.address) {
+                delete location.latitude;
+                delete location.longitude;
+                delete location.formatted_address;
             }
         })
     }
@@ -279,7 +305,7 @@ function computeTransit(origin, destinations, update) {
             destination:new google.maps.LatLng(dest.latitude, dest.longitude),
             travelMode: google.maps.TravelMode.TRANSIT,
             transitOptions: {
-                departureTime: new Date(2014, 2, 3, 8, 0, 0, 0)
+                arrivalTime: new Date(2014, 2, 3, 9, 15, 0, 0)
             }
         };
         console.log("public transit from",origin.formatted_address,"to",dest.formatted_address, request)

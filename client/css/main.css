@@ -9,7 +9,7 @@ html, body {
     box-sizing: border-box;
 }
 #map-canvas {
-    width: 80%;
+    width: 100%;
     height: 300px;
     background: #888;
 }
@@ -20,11 +20,29 @@ html, body {
 #input {
     background: #eee;
     box-sizing: border-box;
-    left: auto;
-    width: 45em;
-    bottom: 50%;
-    padding: 10px;
+    width: 100%;
 }
+#input > * {
+    display: table-cell;
+    padding: 10px;
+    width: 50%;
+}
+#input input,
+#routes .origin input {
+    border: solid 1px transparent;
+    border-bottom-color: #888;
+    background: none;
+}
+#input input:hover,
+#input input:active,
+#input input:focus,
+#routes .origin input:hover,
+#routes .origin input:active,
+#routes .origin input:focus {
+    border: solid 1px #888;
+    background: #fff;
+}
+
 #input .name input {
     width: 10em;
 }
@@ -32,10 +50,9 @@ html, body {
     width: 15em;
 }
 #routes .origin .name input {
-    width: 7em;
+    width: 10em;
 }
 #routes .origin .address input {
-
     width: 100%;
 }
 .id {
@@ -78,12 +95,17 @@ h1 {
     border: solid 1px #eee;
     border-left-color: #888;
     border-right-color: #888;
-    white-space: nowrap;
     vertical-align: top;
 }
 #routes th {
     background: #eee;
     border: solid 1px #888;
+}
+#routes th * {
+    vertical-align: top;
+}
+#routes td {
+    white-space: nowrap;
 }
 
 textarea {
@@ -139,3 +161,21 @@ textarea {
 #routes .show-transit .transit {
     display: block;
 }
+.print-only {
+    display: none;
+}
+@media print {
+    label,
+    button,
+    #routes > p,
+    #database-section {
+        display: none;
+    }
+    .print-only {
+        display: inline-block;
+    }
+    #routes .origin .print-only {
+        max-width: 10em;
+    }
+}
+
