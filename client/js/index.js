@@ -1,10 +1,11 @@
-var UI = require('./lib/ui.ract');
+var Ractive = require('ractive');
+var UI = Ractive.extend(require('./lib/ui.ract'));
 
-var google
+var google;
 var databaseDom = document.getElementById('database');
-console.log("Getting database from localstorage")
+console.log("Getting database from localstorage");
 databaseDom.value = window.localStorage.getItem('map-database');
-console.log("databaseDom.value",{value:databaseDom.value})
+console.log("databaseDom.value",{value:databaseDom.value});
 
 function icon(letter, color) {
     return 'https://chart.googleapis.com/chart?chst=d_map_pin_letter&chld='+letter+'|'+color+'|000000'
@@ -50,7 +51,7 @@ function readDatabase() {
 //ui.on('update', updateDatabase);
 function updateDatabase() {
     if (!justchanged && !databaseFocus) {
-        var json = JSON.stringify(ui.get(), null, 2)
+        var json = JSON.stringify(ui.get(), null, 2);
         if (json !== databaseDom.value) {
             console.log("Updating textarea from ractive...");
             databaseDom.value = json;
@@ -63,10 +64,10 @@ setInterval(function() {
 }, 1000);
 
 function saveDatabase() {
-    console.log("Saving textarea to localstorage...", {value:databaseDom.value});
+    console.log("Saving textarea to localstorage...");
     window.localStorage.setItem('map-database', databaseDom.value);
     if (databaseDom.value !== window.localStorage.getItem('map-database')) {
-        console.error("JSON MISMATCH:",{databse:databaseDom.value,localstorage:window.localStorage.getItem('map-database')})
+        console.error("JSON MISMATCH:",{database:databaseDom.value,localstorage:window.localStorage.getItem('map-database')});
     }
     addPins();
 }
@@ -76,7 +77,7 @@ function saveDatabase() {
 var map;
 readDatabase();
 
-var pinCache = {}
+var pinCache = {};
 
 function addPins() {
     if (!map || !google) {
@@ -125,7 +126,7 @@ window.initializeGMaps = function() {
 function loadScript() {
     var script = document.createElement('script');
     script.type = 'text/javascript';
-    script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&callback=initializeGMaps';
+    script.src = 'https://maps.googleapis.com/maps/api/js?v=3.15&libraries=places&sensor=false&callback=initializeGMaps';
     document.body.appendChild(script);
 }
 
