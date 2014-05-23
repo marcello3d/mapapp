@@ -14,10 +14,10 @@
                     <span class="print-only"><b>{{name}}</b></span>
                     <label class="name"><input placeholder="Name..." value="{{name}}"></label>
                     <label class="address"><input placeholder="Address..." value="{{address}}" on-change="change-address:{{this}}"></label>
-                    <label class="transit"><input type="checkbox" checked="{{.driving}}"><img class="icon" src="/img/car.svg"></label>
-                    <label class="transit"><input type="checkbox" checked="{{.walking}}"><img class="icon" src="/img/walk.svg"></label>
-                    <label class="transit"><input type="checkbox" checked="{{.biking}}"><img class="icon" src="/img/bike.svg"></label>
-                    <label class="transit"><input type="checkbox" checked="{{.transiting}}"><img class="icon" src="/img/transit.svg"></label>
+                    <label class="transit"><input type="checkbox" checked="{{.driving}}"><img class="icon" src="img/car.svg"></label>
+                    <label class="transit"><input type="checkbox" checked="{{.walking}}"><img class="icon" src="img/walk.svg"></label>
+                    <label class="transit"><input type="checkbox" checked="{{.biking}}"><img class="icon" src="img/bike.svg"></label>
+                    <label class="transit"><input type="checkbox" checked="{{.transiting}}"><img class="icon" src="img/transit.svg"></label>
                 </div>
             {{/destinations}}
             <p><button on-click="add-destination">Add Destination</button></p>
@@ -43,10 +43,10 @@
     <h1>Travel Time</h1>
     <p>
         Show:
-        <label><input type="checkbox" checked="{{showDriving}}"><img class="icon" src="/img/car.svg"> Driving</label>
-        <label><input type="checkbox" checked="{{showWalking}}"><img class="icon" src="/img/walk.svg"> Walking</label>
-        <label><input type="checkbox" checked="{{showBiking}}"><img class="icon" src="/img/bike.svg"> Biking</label>
-        <label><input type="checkbox" checked="{{showTransit}}"><img class="icon" src="/img/transit.svg"> Transit</label>
+        <label><input type="checkbox" checked="{{showDriving}}"><img class="icon" src="img/car.svg"> Driving</label>
+        <label><input type="checkbox" checked="{{showWalking}}"><img class="icon" src="img/walk.svg"> Walking</label>
+        <label><input type="checkbox" checked="{{showBiking}}"><img class="icon" src="img/bike.svg"> Biking</label>
+        <label><input type="checkbox" checked="{{showTransit}}"><img class="icon" src="img/transit.svg"> Transit</label>
     </p>
 
     {{#origins:o}}
@@ -74,10 +74,10 @@
         </tr>
         <tr>
                 <th></th>
-                <th>{{#showDriving}}<img class="icon" src="/img/car.svg">{{/showDriving}}</th>
-                <th>{{#showWalking}}<img class="icon" src="/img/walk.svg">{{/showWalking}}</th>
-                <th>{{#showBiking}}<img class="icon" src="/img/bike.svg">{{/showBiking}}</th>
-                <th>{{#showTransit}}<img class="icon" src="/img/transit.svg">{{/showTransit}}</th>
+                <th>{{#showDriving}}<img class="icon" src="img/car.svg">{{/showDriving}}</th>
+                <th>{{#showWalking}}<img class="icon" src="img/walk.svg">{{/showWalking}}</th>
+                <th>{{#showBiking}}<img class="icon" src="img/bike.svg">{{/showBiking}}</th>
+                <th>{{#showTransit}}<img class="icon" src="img/transit.svg">{{/showTransit}}</th>
         </tr>
         {{#destinations:d}}
             {{#formatted_address}}
@@ -204,8 +204,7 @@ component.exports = {
                     } else {
                         alert('Geocode was not successful for the following reason: ' + status);
                     }
-                });
-//                self.update()
+                })
             }
             if (location && !location.address) {
                 delete location.latitude;
