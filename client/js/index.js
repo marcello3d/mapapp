@@ -18,7 +18,11 @@ var ui = new UI({
     data: {
         destinations:[],
         origins:[],
-        calculations:{}
+        calculations:{},
+        showDriving: true,
+        showWalking: true,
+        showBiking: true,
+        showTransit: true
     }
 });
 
