@@ -126,7 +126,7 @@ window.initializeGMaps = function() {
 function loadScript() {
     var script = document.createElement('script');
     script.type = 'text/javascript';
-    script.src = 'https://maps.googleapis.com/maps/api/js?v=3.15&libraries=places&sensor=false&callback=initializeGMaps';
+    script.src = 'https://maps.googleapis.com/maps/api/js?v=3.15&sensor=false&callback=initializeGMaps';
     document.body.appendChild(script);
 }
 

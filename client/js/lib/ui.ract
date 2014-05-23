@@ -13,7 +13,7 @@
                     <span class="id">{{d+1}}</span>
                     <span class="print-only"><b>{{name}}</b></span>
                     <label class="name"><input placeholder="Name..." value="{{name}}"></label>
-                    <label class="address"><input placeholder="Address..." value="{{address}}" on-change="update:{{this}}" decorator="googlecomplete"></label>
+                    <label class="address"><input placeholder="Address..." value="{{address}}" on-change="change-address:{{this}}"></label>
                     <label class="transit"><input type="checkbox" checked="{{.driving}}"><img class="icon" src="/img/car.svg"></label>
                     <label class="transit"><input type="checkbox" checked="{{.walking}}"><img class="icon" src="/img/walk.svg"></label>
                     <label class="transit"><input type="checkbox" checked="{{.biking}}"><img class="icon" src="/img/bike.svg"></label>
@@ -29,7 +29,7 @@
                 <span class="id">{{o+1}}</span>
                 <span class="print-only"><b>{{address}}</b></span>
                 <label class="name"><input placeholder="Name..." value="{{name}}"></label>
-                <label class="address"><input placeholder="Address..." value="{{address}}" on-change="update:{{this}}" decorator="googlecomplete"></label>
+                <label class="address"><input placeholder="Address..." value="{{address}}" on-change="change-address:{{this}}"></label>
             </div>
             {{/origins}}
             <p><button on-click="add-origin">Add Origin</button></p>
@@ -64,7 +64,7 @@
                     <span class="id">{{id}}</span>
                     <span class="print-only"><b>{{address}}</b></span>
                     <label class="name"><input value="{{name}}" placeholder="Name..."></label><br>
-                    <label class="address"><input value="{{address}}" placeholder="Address..." on-change="update:{{this}}" decorator="googlecomplete"></label><br>
+                    <label class="address"><input value="{{address}}" placeholder="Address..." on-change="change-address:{{this}}"></label><br>
                     <button on-click="compute:{{this}}">Compute</button>
                     <a href="http://www.trulia.com/validate.php?hsb=1&tst=h&locationId=&topnav_extra=&q=&search={{address}}" target="_blank">Trulia</a>
                     <a href="http://maps.google.com/maps?q={{formatted_address}}" target="_blank">Google</a>
@@ -155,9 +155,6 @@ component.exports = {
                     }[type])
         }
     },
-    decorators: {
-        googlecomplete:googlecomplete
-    },
     init: function() {
         var self = this;
         this.on('add-destination', function () {
@@ -190,9 +187,9 @@ component.exports = {
             compute(origin, destinations, 'drive', update);
             compute(origin, destinations, 'transit', update);
         });
-        this.on('update', function(context, location) {
+        this.on('change-address', function(context, location) {
             if (location && location.address && location.address !== location.formatted_address) {
-                console.log(location);
+                console.log("Updating location:", location);
                 window.geocoder.geocode({address: location.address}, function(results, status) {
                     if (status === google.maps.GeocoderStatus.OK) {
                         console.log("results", results);
@@ -203,11 +200,12 @@ component.exports = {
                         if (!location.name) {
                             location.name = location.address.replace(/^([\S]+\s+[\S]+).*$/, '$1')
                         }
-                        self.update(context.keypath)
+                        self.update()
                     } else {
                         alert('Geocode was not successful for the following reason: ' + status);
                     }
                 });
+//                self.update()
             }
             if (location && !location.address) {
                 delete location.latitude;
@@ -217,24 +215,6 @@ component.exports = {
         })
     }
 };
-
-function googlecomplete(node) {
-    if ('google' in window && window.google.maps && window.google.maps.places) {
-        if (!node.googlecomplete) {
-            node.googlecomplete = new google.maps.places.Autocomplete(node);
-        }
-    } else {
-        console.log("no google to add");
-        setTimeout(function() {
-            googlecomplete(node);
-        }, 1000)
-    }
-    return {
-        teardown: function() {
-            console.warn("Didn't teardown autocomplete on ",node);
-        }
-    };
-}
 
 function compute(origin, destinations, type, update) {
     if (type === 'transit') {
